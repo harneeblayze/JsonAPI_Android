@@ -7,19 +7,25 @@ package com.example.android.quakereport;
 public class Edata {
     private String location;
     private String magnitude;
-    private String date;
-    public Edata(String mag, String mLoc, String mdate){
+   // private String date;
+    private long mTimeInMillisecs;
+    public Edata(String mag, String mLoc, long timeInMillisecs){
         location = mLoc;
         magnitude = mag;
-        date = mdate;
+        mTimeInMillisecs = timeInMillisecs;
     }
 
     public String getLocation() {
         return location;
     }
 
-    public String getDate() {
-        return date;
+    //public String getDate() {
+      //  return date;
+    //}
+
+
+    public long getmTimeInMillisecs() {
+        return mTimeInMillisecs;
     }
 
     public String getMagnitude() {

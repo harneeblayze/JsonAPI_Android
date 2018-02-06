@@ -8,9 +8,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 
 
 /**
@@ -112,13 +110,13 @@ public final class QueryUtils {
                 //first get the long unix time from the json code
                 long millisecs = prop.getLong("time");
                 //create a new object of the Date class that will help us save our long data as a date for android studio to understand that the data is a unix time and not just and ordinary long value
-                Date dateObject = new Date(millisecs);
+               // Date dateObject = new Date(millisecs);
                 //create a dateformatter object which is called SimpleDateFormat which will help us format our date in the way we want it to appear
-                SimpleDateFormat dateFormat = new SimpleDateFormat("MMM DD, yyyy");
+                //SimpleDateFormat dateFormat = new SimpleDateFormat("MMM DD, yyyy");
                 //parse our long data saved in the object of the Date class for it to be formatted and our result is saved in a string
-                String time = dateFormat.format(dateObject);
+                //String time = dateFormat.format(dateObject);
 
-                Edata edata = new Edata(mag,loc,time);
+                Edata edata = new Edata(mag,loc,millisecs);
                 earthquakes.add(edata);
 
             }

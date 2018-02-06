@@ -18,4 +18,5 @@
     <string name="mag">7.2</string>
     <string name="location">San fransisco</string>
     <string name="date">Feb 2, 2016</string>
+    <string name="near_the">Near the</string>
 </resources>
