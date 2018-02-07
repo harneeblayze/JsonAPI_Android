@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -42,8 +43,10 @@ public class EarthquakeAdapter extends ArrayAdapter<Edata> {
         Edata currentData = getItem(position);
         // Find the TextView with view ID magnitude
         TextView magnit = (TextView)listItemView.findViewById(R.id.magnitude);
+        DecimalFormat format = new DecimalFormat("0.0");
+        String magformatted = format.format(currentData.getMagnitude());
         // Display the magnitude of the current earthquake in that TextView
-        magnit.setText(currentData.getMagnitude());
+        magnit.setText(magformatted);
 
         //we first get the location from the json through our adapter through our custom class and store it as the original location
         String originalLocation = currentData.getLocation();

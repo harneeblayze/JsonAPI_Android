@@ -102,7 +102,7 @@ public final class QueryUtils {
                 //Get “properties” JSONObject
                 JSONObject prop = quake.optJSONObject("properties");
                 //Extract “mag” for magnitude
-                String mag = prop.getString("mag");
+                double mag = prop.getDouble("mag");
                 //Extract “place” for location
                 String loc = prop.optString("place");
                 //Extract “time” for time
