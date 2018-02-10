@@ -9,10 +9,12 @@ public class Edata {
     private double magnitude;
    // private String date;
     private long mTimeInMillisecs;
-    public Edata(double mag, String mLoc, long timeInMillisecs){
+    private  String mUrl;
+    public Edata(double mag, String mLoc, long timeInMillisecs, String url){
         location = mLoc;
         magnitude = mag;
         mTimeInMillisecs = timeInMillisecs;
+        mUrl = url;
     }
 
     public String getLocation() {
@@ -30,5 +32,9 @@ public class Edata {
 
     public double getMagnitude() {
         return magnitude;
+    }
+
+    public String getmUrl() {
+        return mUrl;
     }
 }

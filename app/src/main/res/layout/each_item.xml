@@ -3,50 +3,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
     <TextView
         android:id="@+id/magnitude"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:paddingLeft="18dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/magnitude_circle"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@android:color/white"
         tools:text="@string/mag"
-        android:textSize="12sp"/>
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
 
     <TextView
         android:id="@+id/offset_loc"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="16dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:fontFamily="sans-serif-medium"
+        android:textAllCaps="true"
+        android:textSize="12sp"
+        android:textColor="@color/textColorEarthquakeDetails"
         tools:text="74km NW of"/>
 
     <TextView
         android:id="@+id/loc"
-        android:layout_width="0dp"
-        android:layout_weight="1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="@string/location"
-        android:textSize="12sp"
-        android:paddingBottom="12dp"
-        android:paddingTop="12dp"/>
+        android:ellipsize="end"
+        android:maxLines="2"
+        tools:text="Long placeholder location that should wrap to more than 2 lines of text"
+        android:textSize="16sp"
+        android:textColor="@color/textColorEarthquakeLocation"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical">
+
 
     <TextView
         android:id="@+id/date"
-        android:layout_width="0dp"
-        android:layout_weight="1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="@string/date"
         android:textSize="12sp"
-        android:paddingBottom="12dp"
-        android:paddingTop="12dp"/>
+        android:textColor="@color/textColorEarthquakeDetails"
+        android:layout_gravity="end"/>
 
     <TextView
         android:id="@+id/time"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_gravity="end"
+        android:textSize="12sp"
+        android:textColor="@color/textColorEarthquakeDetails"
         tools:text="3:00 PM"/>
+
+    </LinearLayout>
 
 </LinearLayout>

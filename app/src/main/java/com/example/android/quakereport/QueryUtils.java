@@ -115,8 +115,9 @@ public final class QueryUtils {
                 //SimpleDateFormat dateFormat = new SimpleDateFormat("MMM DD, yyyy");
                 //parse our long data saved in the object of the Date class for it to be formatted and our result is saved in a string
                 //String time = dateFormat.format(dateObject);
+                String url = prop.getString("url");
 
-                Edata edata = new Edata(mag,loc,millisecs);
+                Edata edata = new Edata(mag,loc,millisecs,url);
                 earthquakes.add(edata);
 
             }
